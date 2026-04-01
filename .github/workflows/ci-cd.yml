@@ -109,7 +109,7 @@ jobs:
         with:
           host: ${{ secrets.AZURE_VM_HOST }}
           username: ${{ secrets.AZURE_VM_USER }}
-          key: ${{ secrets.AZURE_SSH_PRIVATE_KEY }}
+          password: ${{ secrets.AZURE_VM_PASSWORD }}
           source: docker-compose.deploy.yml
           target: /home/${{ secrets.AZURE_VM_USER }}/cosmicdeploy/
           strip_components: 0
@@ -120,7 +120,7 @@ jobs:
         with:
           host: ${{ secrets.AZURE_VM_HOST }}
           username: ${{ secrets.AZURE_VM_USER }}
-          key: ${{ secrets.AZURE_SSH_PRIVATE_KEY }}
+          password: ${{ secrets.AZURE_VM_PASSWORD }}
           script: |
             cd /home/${{ secrets.AZURE_VM_USER }}/cosmicdeploy
 
