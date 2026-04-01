@@ -1,0 +1,13 @@
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+# Environment — ne jamais committer
+.env
+
+# Dependencies
+node_modules/
+
+# Docker compose artifact généré en CI
+docker-compose.deploy.yml
