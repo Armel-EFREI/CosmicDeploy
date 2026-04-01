@@ -11,3 +11,4 @@ node_modules/
 
 # Docker compose artifact généré en CI
 docker-compose.deploy.yml
+.DS_Store
