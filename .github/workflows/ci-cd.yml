@@ -144,7 +144,8 @@ jobs:
               --dry-run=client -o yaml | kubectl apply -f -
 
             # ── Apply Deployment + Service ──
-            kubectl apply -f k8s/
+            # Fichiers explicites (kustomization.yaml n'est pas applicable via -f)
+            kubectl apply -f k8s/deployment.yaml -f k8s/service.yaml
 
             # ── Force le nouveau tag SHA (si apply n'a pas détecté de diff) ──
             kubectl set image deployment/cosmicdeploy \
